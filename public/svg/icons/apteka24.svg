@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.9958334mm"
+   height="8.9958334mm"
+   viewBox="0 0 8.9958334 8.9958334"
+   version="1.1"
+   id="svg235"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="apteka_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview237"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="4.0920134"
+     inkscape:cx="33.846419"
+     inkscape:cy="15.273655"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs232">
+    <clipPath
+       id="clip0">
+      <rect
+         width="34"
+         height="34"
+         fill="#ffffff"
+         id="rect32"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-51.162422,-37.043491)">
+    <g
+       clip-path="url(#clip0)"
+       id="g8"
+       transform="matrix(0.26458333,0,0,0.26458333,51.162422,37.043491)">
+      <path
+         d="m 24.2483,24.248 v 2.5039 c 0,4.003 -3.245,7.2481 -7.2479,7.2481 -4.003,0 -7.24796,-3.2451 -7.24796,-7.2481 V 13.4416 c 0,-2.0379 1.65196,-3.68992 3.68986,-3.68992 h 13.3098 c 4.0029,0 7.248,3.24512 7.248,7.24812 0,4.0031 -3.2451,7.2482 -7.248,7.2482 z"
+         fill="#88bbff"
+         id="path2" />
+      <path
+         d="M 9.7517,9.75204 V 7.24814 C 9.7517,3.2451 12.9967,0 16.9996,0 c 4.003,0 7.248,3.2451 7.248,7.24814 V 20.5584 c 0,2.0379 -1.652,3.6899 -3.6899,3.6899 H 7.24787 C 3.24495,24.2483 -5.53131e-5,21.0032 -5.53131e-5,17.0002 -5.53131e-5,12.9971 3.24495,9.75204 7.24787,9.75204 Z"
+         fill="#ff3366"
+         id="path4" />
+      <path
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 9.75186,24.2486 V 13.4419 c 0,-2.0379 1.65204,-3.68995 3.68984,-3.68995 H 24.248 V 20.5586 c 0,2.0379 -1.652,3.69 -3.6898,3.69 z"
+         fill="#d21746"
+         id="path6" />
+    </g>
+  </g>
+</svg>

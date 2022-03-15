@@ -1,0 +1,12 @@
+.change-log {
+    line-height: 150%;
+    .attribute {
+        font-weight: 500;
+    }
+    .new,.old{
+        white-space: pre-line;
+    }
+    .old {
+        text-decoration: line-through;
+    }
+}

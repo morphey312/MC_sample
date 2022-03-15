@@ -1,0 +1,17 @@
+<?php
+
+namespace App\V1\Observers\Audit\MoneyReciever;
+
+use App\V1\Observers\Audit\BaseAudit;
+
+class CashboxAudit extends BaseAudit
+{
+    /**
+     * @var array
+     */
+    protected $attributes = [
+        'money_reciever_id',
+        'name',
+        'cashbox_key',
+    ];
+}

@@ -1,0 +1,95 @@
+.svg-icon {
+    display: inline-block;
+
+    svg, span {
+        vertical-align: middle;
+    }
+    span {
+        margin-left: 5px;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+        fill: $black;
+    }
+
+    &.disabled{
+        svg {
+            fill: grey!important;
+            cursor: default!important;
+        }
+    }
+
+    &.icon-large svg {
+        width: 30px;
+        height: 30px;
+    }
+    &.icon-small svg {
+        width: 20px;
+        height: 20px;
+    }
+    &.icon-tiny svg {
+        width: 16px;
+        height: 16px;
+    }
+    &.icon-xtiny svg {
+        width: 13px;
+        height: 13px;
+    }
+    &.icon-tiddly svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    &.icon-light-blue svg {
+        fill: $blue-sh4;
+    }
+    &.icon-blue svg {
+        fill: $blue;
+    }
+    &.icon-green svg {
+        fill: $green;
+    }
+    &.icon-white svg {
+        fill: $white;
+    }
+    &.icon-grey svg {
+        fill: $grey-sh3;
+    }
+    &.icon-red svg {
+        fill: $red;
+    }
+    &.icon-black svg {
+        fill: $grey;
+    }
+
+    &:not(.icon-outline):hover svg {
+        fill: $green;
+    }
+    &.icon-blue:not(.icon-outline):hover svg {
+        fill: $green;
+    }
+    &.icon-green:not(.icon-outline):hover svg {
+        fill: $blue;
+    }
+    &.icon-white:not(.icon-outline):hover svg {
+        fill: $beige;
+    }
+    &.icon-grey:not(.icon-outline):hover svg {
+        fill: $black;
+    }
+    
+    &.icon-outline {
+        border: 1px solid transparent;
+        border-radius: 2px;
+    }
+    &.icon-outline:hover {
+        border-color: $black;
+    }
+    &.icon-outline.icon-blue:hover {
+        border-color: $blue;
+    }
+    &.icon-outline.icon-green:hover {
+        border-color: $green;
+    }
+}

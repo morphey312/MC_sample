@@ -1,0 +1,27 @@
+.complete-processing-alert {
+    position: fixed;
+    z-index: 3000;
+    top: 7px;
+    left: 50%;
+    
+    .body {
+        transform: translateX(-50%);
+        background: $beige;
+        box-shadow: $--box-shadow-base;
+        border-radius: 4px;
+        padding: 3px 10px;
+        display: flex;
+        background: $beige;
+        align-items: center;
+        cursor: move;
+        position: relative;
+        
+        &.dragging {
+            transform:translateX(-9999px);
+        }
+    }
+
+    .message {
+        margin-left: 10px;
+    }
+}

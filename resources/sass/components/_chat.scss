@@ -1,0 +1,32 @@
+.chat-body {
+    max-height: 400px;
+    overflow:hidden;
+    overflow-y:auto;
+
+    &__item {
+        padding:3px 0;display:flex;
+
+        &-user {
+            display:flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        &-name {
+            width: 100%;
+        }
+        &-time {
+            font-size: 10px;
+        }
+        &-message {
+            display: flex;
+        }
+        &-text {
+            display:flex;
+            align-items:center;
+            width:100%; 
+            background-color: rgba(236, 236, 236, 1);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+    }
+}

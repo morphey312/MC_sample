@@ -1,0 +1,66 @@
+.el-popover {
+    text-align: left;
+    font: $font-family-roboto-regular-serif;
+    line-height: inherit;
+
+    .el-popover__title {
+        font: $font-family-roboto-button-serif;
+        font-weight: bold;
+    }
+}
+
+.el-tooltip__popper {
+    &.light-popover-content {
+        line-height: 18px;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25);
+
+        &.specialization-popover {
+            width: 300px;
+        }
+
+        &.patient-warning {
+            max-width: 280px;
+        }
+    }
+}
+
+.el-tooltip__popper.is-light[x-placement^="bottom"] .popper__arrow {
+    border-bottom-color: transparent;
+
+    &::after {
+        border-bottom-color: transparent;
+    }
+}
+.info-mark-prices {
+    .item-tag {
+        line-height: 18px;
+    }
+    .line-through{
+        text-decoration: line-through;
+    }
+    .item-tag-mark {
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        border-radius: 20%;
+
+        &.yellow {
+            background-color: $green-sh3;
+        }
+
+        &.green {
+            background-color: #EEF9D2;
+        }
+
+        &.grey {
+            background-color: $grey-sh2;
+        }
+
+        &.blue {
+            background-color: $blue-sh4;
+        }
+
+    }
+}

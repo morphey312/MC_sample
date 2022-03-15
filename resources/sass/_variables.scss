@@ -1,0 +1,213 @@
+// Typography
+$font-family-roboto-large-serif: 14px Roboto, sans-serif;
+$font-family-roboto-regular-serif: 12px Roboto, sans-serif;
+$font-family-roboto-small-serif: 10px Roboto, sans-serif;
+$font-family-roboto-menu-serif: $font-family-roboto-regular-serif;
+$font-family-roboto-button-serif: 12px bold Roboto, sans-serif;
+
+$font-neo-sans-large: 36px "Neo Sans Pro Regular", serif ;
+$font-neo-sans-medium: 24px "Neo Sans Pro Regular", serif ;
+$font-neo-sans-regular: 18px "Neo Sans Pro Regular", serif;
+$font-neo-sans-small: 14px "Neo Sans Pro Regular", serif;
+$font-neo-sans-tiny: 12px "Neo Sans Pro Regular", serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+// Blue & shades
+$blue: #1B6EBE;
+$blue-sh1: #1B70B8;
+$blue-sh2: #3283C7;
+$blue-sh3: #4195DD;
+$blue-sh4: #66B6FA;
+$blue-sh5: #C0E2FF;
+$blue-sh6: #E9F5FF;
+
+// Green & shades
+$green: #B7B308;
+$green-sh1: #D6D214;
+$green-sh2: #E9E542;
+$green-sh3: #F1EF8A;
+$green-sh4: #F2F2D5;
+$green-sh5: #FDFCDD;
+$green-sh6: #FFFFEA;
+$green-sh7: #EAE889;
+$green-sh8: #B7B430;
+
+// Red & shades
+$red: #E87C7C;
+$red-sh1: #F49191;
+$red-sh2: #F8A8A8;
+$red-sh3: #F8B3B3;
+$red-sh4: #F9C1C1;
+$red-sh5: #FBCACA;
+$red-sh6: #FFE0E0;
+
+// Grey & shades
+$grey: #333333;
+$grey-sh1: #4F4F4F;
+$grey-sh2: #828282;
+$grey-sh3: #BDBDBD;
+$grey-sh4: #E0E0E0;
+$grey-sh5: #F2F2F2;
+$grey-sh6: #FFFFFF;
+$grey-sh7: #E5E5E5;
+
+// Non-standard colors
+$purple: #9561e2;
+$deep-blue: #0A5493;
+$sky-blue: #78C0FF;
+$pink: #F66D9B;
+$orange: #F6993F;
+$deep-green: #43b706;
+$teal: #4DC0B5;
+$deep-black: #000000;
+
+// Colors aliases
+$red-alt: #FF0000;
+$deep-blue-alt: #0008C7;
+$light-blue: $blue-sh5;
+$indigo: $blue-sh1;
+$light-green: $green-sh1;
+$light-grey: $grey-sh5;
+$dark-grey: $grey-sh3;
+$cyan: $blue-sh4;
+$beige: $grey-sh5;
+$black: $grey;
+$deep-black: $deep-black;
+$white: $grey-sh6;
+
+// Body
+$body-bg: $blue-sh4;
+
+// Menu
+$side-menu-width: 280px;
+$side-menu-collapsed-width: 40px;
+
+// Element UI overrides
+$--font-size-base: 12px;
+
+// Buttons
+$--button-font-size: $--font-size-base;
+$--button-border-radius: 3px;
+$--button-padding-vertical: 9px;
+$--button-padding-horizontal: 12px;
+
+$--button-medium-font-size: $--button-font-size;
+$--button-medium-border-radius: $--button-border-radius;
+$--button-medium-padding-vertical: $--button-padding-vertical;
+$--button-medium-padding-horizontal: $--button-padding-horizontal;
+
+$--button-small-font-size: $--font-size-base;
+$--button-small-border-radius: $--button-border-radius;
+$--button-small-padding-vertical: 4px;
+$--button-small-padding-horizontal: 6px;
+
+$--button-mini-font-size: #{$--font-size-base - 2};
+$--button-mini-border-radius: $--button-border-radius;
+$--button-mini-padding-vertical: 4px;
+$--button-mini-padding-horizontal: 6px;
+
+$--button-default-color: $black;
+$--button-default-fill: $white;
+$--button-default-border: $green;
+$--button-default-hover-fill: $beige;
+$--button-default-hover-border: $green;
+
+$--button-primary-color: $white;
+$--button-primary-fill: $green;
+$--button-primary-hover-fill: $green;
+
+// Input
+$--input-width: 100%;
+$--input-font-size: $--font-size-base;
+$--input-color: $black;
+$--input-height: 30px;
+$--input-border-color: $grey-sh3;
+$--input-border-radius: 2px;
+$--input-border-color-hover: $blue;
+$--input-fill: $white;
+$--input-fill-disabled: $beige;
+$--input-color-disabled: $grey-sh2;
+$--input-icon-color: $grey-sh2;
+$--input-placeholder-color: $grey-sh2;
+$--input-max-width: 100%;
+$--input-hover-border: $blue;
+$--input-focus-border: $grey-sh3;
+$--input-focus-fill: $white;
+$--input-disabled-fill: $beige;
+$--input-disabled-color: $grey-sh2;
+$--input-disabled-placeholder-color: $grey-sh2;
+
+$--input-medium-font-size: $--font-size-base;
+$--input-medium-height: 30px;
+
+$--input-small-font-size: $--font-size-base;
+$--input-small-height: 30px;
+
+$--input-mini-font-size: $--font-size-base;
+$--input-mini-height: 24px;
+
+// Select
+$--select-border-color-hover: $blue;
+$--select-disabled-border: $grey-sh3;
+$--select-font-size: $--font-size-base;
+$--select-close-hover-color: $blue;
+
+$--select-input-color: $black;
+$--select-multiple-input-color: $black;
+$--select-input-focus-background: $grey-sh3;
+$--select-input-font-size: $--font-size-base;
+
+$--select-option-color: $blue;
+$--select-option-disabled-color: $beige;
+$--select-option-disabled-background: $white;
+$--select-option-height: 30px;
+$--select-option-hover-background: $beige;
+$--select-option-selected: $white;
+$--select-option-selected-hover: $white;
+
+$--select-dropdown-background: $white;
+$--select-dropdown-empty-color: $white;
+$--select-dropdown-max-height: 300px;
+$--select-dropdown-padding: 10px 0;
+$--select-dropdown-empty-padding: 10px 0;
+$--select-dropdown-border: none;
+
+// Radio button
+$--radio-button-checked-fill: $green;
+$--radio-button-checked-color: $white;
+$--radio-button-checked-border-color: $green;
+$--radio-button-disabled-checked-fill: $green;
+
+// Check button
+$--checkbox-button-checked-fill: $green;
+$--checkbox-button-checked-color: $white;
+$--checkbox-button-checked-border-color: $green;
+$--checkbox-button-disabled-checked-fill: $green;
+
+// Checkbox
+$--checkbox-font-size: $--font-size-base;
+$--checkbox-color: $black;
+$--checkbox-input-height: $--font-size-base;
+$--checkbox-input-width: $--font-size-base;
+$--checkbox-input-border-radius: 2px;
+$--checkbox-input-fill: $white;
+$--checkbox-input-border: 1px solid $grey-sh3;
+$--checkbox-input-border-color: $grey-sh3;
+$--checkbox-icon-color: $white;
+
+$--checkbox-disabled-input-border-color: $grey-sh3;
+$--checkbox-disabled-input-fill: $white;
+$--checkbox-disabled-icon-color: $grey-sh3;
+
+$--checkbox-disabled-checked-input-fill: $white;
+$--checkbox-disabled-checked-input-border-color: $grey-sh3;
+$--checkbox-disabled-checked-icon-color: $grey-sh3;
+
+$--checkbox-checked-text-color: $black;
+$--checkbox-checked-input-border-color: $green;
+$--checkbox-checked-input-fill: $green;
+$--checkbox-checked-icon-color: $white;
+
+$--checkbox-input-border-color-hover: $blue;

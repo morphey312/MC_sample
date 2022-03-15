@@ -1,0 +1,15 @@
+<?php
+
+namespace App\V1\Contracts\Repositories\Query\SiteEnquiry;
+
+use App\V1\Contracts\Repositories\Query\Scopes;
+
+interface ServiceScopes extends Scopes
+{
+    /**
+     * Apply default scope
+     * 
+     * @param  mixed $object
+     */ 
+    public function scopeDefault($object);
+}

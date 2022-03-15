@@ -1,0 +1,31 @@
+@import '~viewerjs/dist/viewer.css';
+
+.viewer-container{
+    z-index: 99999!important;
+}
+
+.mw100-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.file-view__wrap{
+    &:hover{
+        .file-viewer-zoom__wrap{
+            opacity: 1;
+        }
+    }
+
+    .file-viewer-zoom__wrap{
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        transition: opacity .4s ease-in-out;
+        opacity: 0;
+    }
+}
+
+

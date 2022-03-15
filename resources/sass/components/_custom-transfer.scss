@@ -1,0 +1,96 @@
+.table-row-transfer{
+	.el-transfer-panel{
+		width: 40%;
+		min-width: 300px;
+
+		.el-transfer-panel__header {
+			.el-checkbox {
+				.el-checkbox__label {
+					font-size: 14px;
+				}		
+			}
+		} 
+
+		.el-transfer-panel__body {
+			&.is-with-footer{
+				padding-top: 40px;
+				padding-bottom: 0;
+
+				.el-transfer-panel__item {
+					padding-left: 10px;
+				    line-height: 16px;
+    				height: auto;
+
+					&.el-checkbox {
+						.el-checkbox__label {
+							padding-left: 20px;
+						}
+					}
+
+					.el-checkbox__input {
+						top: 4px;
+					}
+				} 
+
+				input {
+				 	&.clinic-code-input {
+						width: 50px;
+				 	}
+				}
+
+				td {
+					line-height: 16px;
+					width: 50px;
+					text-align: center;
+
+					&:first-child {
+						width: 170px;
+						white-space: initial;
+						text-align: left;
+					}
+
+					&:last-child {
+						width: auto;	
+					}
+				}
+
+				.el-checkbox {
+					.el-checkbox__label {
+						input{
+							border: 0;
+							border-bottom: 1px solid $grey-sh3;
+						}
+					}		
+				}
+			}
+		}
+		.el-transfer-panel__footer {
+			top: 40px;
+			height: 24px;
+			color: $grey;
+			font-weight: 500;
+			border-bottom: 1px solid $grey-sh3;
+			
+			td {
+				line-height: 16px;
+				width: 50px;
+				white-space: initial;
+
+				&:first-child {
+					width: 155px;	
+				}
+
+				&:last-child {
+					width: auto;	
+				}
+			}
+
+			.service-transfer{
+				td:first-child{
+					width: 205px;
+				}
+			}
+		}
+	}
+}
+

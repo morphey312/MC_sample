@@ -1,0 +1,90 @@
+.price-grid {
+    .changed.success {
+        background-color: #EEF9D2 !important;
+    }
+    .new-price.success {
+        background-color: #b5da9e !important;
+    }
+    .new-clinic.success {
+        background-color: #b6d6f7 !important;
+    }
+    .in-active-act.warning {
+        background-color: #dadada !important;
+    }
+    .changed.warning {
+        background-color: #FBF7BC !important;
+        .svg-icon:not(.icon-grey) svg, .svg-icon:not(.icon-grey):hover svg {
+            fill: #DBBA00;
+        }
+    }
+    .changed.error {
+        background-color: #FFDDDE !important;
+        .svg-icon:not(.icon-grey) svg, .svg-icon:not(.icon-grey):hover svg {
+            fill: #EC7172;
+        }
+    }
+    .changed.closed td:not(.date-column):not(.actions-column):not(.clinic-column):not(.price-column) {
+        text-decoration: line-through;
+    }
+    .was-closed {
+        color: $grey-sh2;
+        .el-input__inner, .static {
+            color: $black;
+        }
+    }
+
+    span.inline-input, span.inline-datepicker {
+        display: block;
+        border-radius: 2px;
+        border: 1px solid $grey-sh3;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 5px;
+        background: $white;
+
+        .el-input__inner {
+            border: none;
+            padding: 0;
+            height: 22px;
+            line-height: 22px;
+        }
+
+        &.disabled {
+            color: $grey-sh2;
+            background: $beige;
+        }
+
+        span.static {
+            display: block;
+            height: 22px;
+        }
+    }
+
+    span.inline-datepicker {
+        position: relative;
+        &:after {
+            border: 4px solid transparent;
+            border-top: 6px solid #1B6EBE;
+            content: ' ';
+            top: 8px;
+            right: 5px;
+            position: absolute;
+            z-index: 1;
+        }
+        .el-date-editor .el-input__suffix {
+            display: none;
+        }
+    }
+
+    .inline-button:focus {
+        box-shadow: inset 0 0 5px 3px $green;
+    }
+
+    .text-right .el-input__inner {
+        text-align: right;
+    }
+
+    .form-input {
+        margin: 0;
+    }
+}

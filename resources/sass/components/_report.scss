@@ -1,0 +1,117 @@
+.el-table {
+    th > .cell {
+        font-size: 12px;
+    }
+
+    .cell {
+        line-height: 14px;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 6px 0;
+        color: $deep-black;
+    }
+
+    thead.is-group th, td {
+        &.label-default {
+            background-color: #f38dee;
+        }
+
+        &.label-green {
+            background-color: #00b050;
+        }
+
+        &.label-red {
+            background-color: #c00000;
+        }
+
+        &.label-orange {
+            background-color: #ffc000;
+        }
+
+        &.label-blue {
+            background-color: #00b0f0;
+        }
+
+        &.label-light-blue {
+            background-color: #ccffff;
+        }
+
+        &.label-grey {
+            background-color: #e0bdfb;
+        }
+
+        &.label-selected {
+            background-color: $green-sh7;
+        }
+
+        &.label-border-left {
+            border-left: 1px solid $deep-black;
+        }
+
+        &.label-border-right {
+            border-right: 1px solid $deep-black;
+        }
+
+        &.label-deep-blue {
+            background-color: $blue-sh2;
+            color: $white;
+        }
+
+        &.label-deep-green {
+            background-color: $green-sh8;
+        }
+
+        &.label-grey {
+            background-color: $grey-sh7;
+        }
+    }
+
+    .el-table__header {
+        .light-grey {
+            background: $grey-sh5 !important;
+
+            th {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .row-selected {
+        background-color: $green-sh7;
+    }
+
+    .row-summary {
+        background-color: $grey-sh3;
+    }
+
+    .row-totals {
+        background-color: $green-sh2;
+    }
+
+    &.table-sm {
+        .cell {
+            font-size: 12px;
+            line-height: 10px;
+        }
+    }
+
+    .table-text-red {
+            color: $red;
+        }
+
+    .table-text-green {
+        color: $deep-green;
+    }
+}
+
+.marketing-report-v2 .total-media-type-row td{
+    color: #0A76C3;
+    border-top: 1px solid $deep-black;
+    border-bottom: 1px solid $deep-black;
+}
+
+.marketing-report-v2 .is-total-row td {
+    color: #C54D4D;
+}

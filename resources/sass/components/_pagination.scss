@@ -1,0 +1,186 @@
+.pagination-wrapper {
+    padding: 0px;
+    border: 1px solid $green-sh4;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &.pagination-right {
+        justify-content: flex-end;
+    }
+
+    .pagination-info-and-pagination {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .page-size-control {
+        width: 80px;
+        margin-right: 20px;
+    }
+
+    .table-settings {
+        flex: 1;
+    }
+
+    .pagination-info {
+        white-space: nowrap;
+        font: $font-family-roboto-regular-serif;
+        color: $grey;
+    }
+    .pagination.menu {
+        margin-left: 12px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+
+        a {
+            background-color: $grey-sh6;
+            &.active,
+            &:hover,
+            &:focus{
+                background-color: $grey-sh4;
+            }
+        }
+
+        .item {
+            width: 35px;
+            height: 30px;
+            border: 1px solid $grey-sh3;
+            font: $font-family-roboto-regular-serif;
+            color: $grey;
+            line-height: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            border-left: none;
+            &:first-child{
+                border-bottom-left-radius: 2px;
+                border-top-left-radius:    2px;
+                border-left: 1px solid $grey-sh3;
+            }
+            &:last-child{
+                border-bottom-right-radius: 2px;
+                border-top-right-radius:    2px;
+            }
+            &.btn-nav.icon {
+                .icon.chevron {
+                    &.left {
+                        &:before {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-right: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                    }
+                    &.right {
+                        &:before {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-left: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                    }
+                }
+                .double.icon {
+                    &.left {
+                        &:before {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-right: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 40%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                        &:after {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-right: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+
+                    }
+                    &.right {
+                        &:before {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-left: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 60%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                        &:after {
+                            display: block;
+                            border: 5px solid transparent;
+                            border-left: 8px solid $blue;
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                    }
+                }
+
+                &.disabled{
+                    cursor: not-allowed;
+                    .double.icon{
+                        &.left{
+                            &:before{
+                                border-right: 8px solid $grey-sh2;
+                            }
+                            &:after{
+                                border-right: 8px solid $grey-sh2;
+                            }
+                        }
+                        &.right{
+                            &:before{
+                                border-left: 8px solid $grey-sh2;
+                            }
+                            &:after{
+                                border-left: 8px solid $grey-sh2;
+                            }
+                        }
+                    }
+                    .icon.chevron{
+                        &.left{
+                            &:before{
+                                border-right: 8px solid $grey-sh2;
+                            }
+
+                        }
+                        &.right{
+                            &:before{
+                                border-left: 8px solid $grey-sh2;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .buttons {
+        padding: 10px;
+    }
+}

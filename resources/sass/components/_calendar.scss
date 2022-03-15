@@ -1,0 +1,99 @@
+.calendar-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 10px;
+    .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        .el-button-group {
+            margin-right: 10px;
+        }
+    }
+    .el-button {
+        margin: 0;
+    }
+    .el-button-group, .el-radio-group {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .label {
+        flex-grow: 1;
+        padding: 0 10px;
+
+        &.period-label {
+            text-transform: capitalize;
+            font: $font-neo-sans-regular;
+        }
+    }
+
+    .calendar-buttons {
+        cursor: pointer;
+
+        .rotate-opposite {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.calendar-view-wrap {
+    display: flex;
+    min-height: 670px;
+
+    .time-scales {
+        margin-top: 18px;
+        padding: 0 2px;
+        border: 1px solid $grey-sh5;
+        display: flex;
+        flex-direction: column;
+        .time {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .calendar-view-inner {
+        flex-grow: 1;
+        background: $white;
+
+        .cv-header-days {
+            .cv-header-day {
+                padding: 5px;
+                justify-content: left;
+                line-height: 20px;
+                text-transform: capitalize;
+                font: $font-family-roboto-regular-serif;
+            }
+        }
+
+        .cv-weeks {
+            .cv-week {
+                max-height: 130px;
+                border-top: 4px solid $grey-sh4;
+            }
+        }
+    }
+}
+
+.day-sheet-schedule {
+    .cv-event {
+        top: 18px;
+        margin-top: 2px;
+        background: none;
+        border: none;
+        overflow: visible;
+
+        .day-sheet-item {
+            .day-sheet-item-list {
+                height: 25px;
+                line-height: 25px;
+                margin-bottom: 2px;
+                padding: 0px 2px;
+                border-radius: 2px;
+                background: $grey-sh5;
+                color: $blue;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

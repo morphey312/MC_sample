@@ -1,0 +1,23 @@
+.el-color-picker {
+    width: 100%;
+    height: 30px;
+    
+    .el-color-picker__trigger {
+        width: 100%;
+        max-width: 230px;
+        height: 30px;
+        padding: 0;
+        border: 0;
+        border-radius: 2px;
+
+        .el-color-picker__color {
+            border: 0;
+            background: $grey-sh4;
+            border-radius: 2px;
+
+            .el-color-picker__color-inner {
+                border-radius: 2px;
+            }
+        }
+    }
+}

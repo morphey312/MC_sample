@@ -1,0 +1,136 @@
+.el-tabs__header {
+    margin: 0;
+    background: $blue;
+    padding: 0 20px;
+    
+    .el-tabs__nav-next, .el-tabs__nav-prev {
+        line-height: 30px;
+    }
+    
+    .el-tabs__item {
+        height: 30px;
+        padding: 8px 20px 0 20px;
+        font: $font-family-roboto-regular-serif;
+        color: $white;
+        font-weight: 500;
+        
+        &:hover {
+            color: $grey-sh4;
+        }
+        
+        .counter {
+            &:before {
+                content: '(';
+            }
+            &:after {
+                content: ')';
+            }
+        }
+    }
+    
+    .el-tabs__nav-wrap::after {
+        display: none;
+    }
+    
+    .el-tabs__active-bar {
+        height: 4px;
+        background-color: $green;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    
+    .el-tabs__nav-wrap {
+        margin-bottom: 0;
+    }
+}
+
+.tab-group-white, 
+.tab-group-beige, 
+.tab-group-grey, 
+.tab-group-trasparent {
+    .el-tabs__header {
+        .el-tabs__item {
+            color: $blue;
+
+            &.is-disabled, &.is-disabled:hover {
+                color: $grey-sh2;
+            }
+            
+            &.is-active, &:hover {
+                color: $grey;
+            }
+        }
+
+        .el-tabs__active-bar {
+            background-color: $green;
+        }
+    }
+
+    section.grey-cap {
+        padding-left: 0;
+        padding-right: 0;
+    } 
+}
+
+.tab-group-white .el-tabs__header {
+    background: $white;
+}
+
+.tab-group-beige .el-tabs__header {
+    background: $beige;
+}
+
+.tab-no-border .el-tabs__header {
+    border: 0;
+}
+
+.tab-group-grey .el-tabs__header {
+    background: $grey-sh7;
+}
+
+.tab-group-trasparent .el-tabs__header {
+    background: transparent;
+}
+
+.tab-header-no-padding {
+    .el-tabs__header.is-top {
+        padding: 0;    
+    }
+}
+
+.shrinkable-tabs {
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex: 1 1 0 !important;
+    
+    .el-tabs__header {
+        flex: none;
+    }
+    
+    .el-tabs__content {
+        flex: 1 1 0;
+        overflow: initial;
+        
+        .el-tab-pane {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            
+            &> .shrinkable {
+                flex: 1 1 0;
+            }
+        }
+    }
+}
+
+.insurance-service-act {
+    .el-tab-pane {
+        .vuetable-body-wrapper.fixed-header {
+            max-height: 60vh;
+        }
+    }
+}

@@ -1,0 +1,428 @@
+.form-tab{
+    position: relative;
+
+    .empty-analysis-list{
+        position: relative;
+        width: 100%;
+        height: 250px;
+
+        .empty-analysis-wrapper{
+            position: absolute;
+            top: calc(50% - 35px);
+            left: calc(50% - 130px);
+            width: 225px;
+            height: 90px;
+            text-align: center;
+
+            .empty-img {
+                height: 60px;
+                width: 60px;
+                margin: 0 auto 12px;
+                background: url('/svg/content/img-no-data.svg') top center no-repeat;
+                background-size: 100%;
+            }
+
+            &.wrapper-large {
+                top: calc(50% - 65px);
+                left: calc(50% - 185px);
+                height: 160px;
+                width: 350px;
+
+                .empty-img {
+                    width: 110px;
+                    height: 110px;
+                }
+            }
+        }
+
+        &.text-only {
+            height: 208px;
+            background: $grey-sh5;
+            border: 1px solid $grey-sh4;
+            &.shrinked{
+                height: 120px;
+                .empty-analysis-wrapper{
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
+            .empty-analysis-wrapper {
+                width: 100%;
+                left: 0;
+                top: calc(50% - 10px);
+            }
+        }
+    }
+}
+
+table.vuetable {
+    .input-text-center {
+        text-align: center;
+    }
+
+    .input-small{
+        width: 60px;
+    }
+    .input-tiny{
+        width: 45px;
+    }
+}
+
+.d-contents{
+    display: contents;
+}
+
+.el-dialog {
+    .separate-form {
+
+        .analysis-table-wrapper.vuetable {
+            border: 1px solid $grey-sh3;
+        }
+
+        .transfer-table {
+            .available-items, .selected-items {
+                border: 1px solid $grey-sh3;
+            }
+        }
+
+        .el-transfer {
+            .price-grid {
+                width: 40%;
+                display: inline-block;
+                vertical-align: middle;
+
+                &:last-child {
+                    width: 54%;
+                }
+
+                + .el-transfer__buttons {
+                    .el-transfer__button{
+                        padding: 0;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        svg {
+                            fill: $grey-sh4;
+
+                            &hover {
+                                fill: $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+p.input-label{
+    margin-right: 30px;
+}
+
+/* Appointment status list color */
+.td-color-wrapper {
+    padding: 5px;
+
+    .status-color {
+      width: 100%;
+      height: 20px;
+      content: ' ';
+    }
+}
+
+.padding-0 {
+    .el-dialog__body {
+        padding: 0;
+
+        section.back {
+            margin: 0;
+        }
+    }
+}
+
+/*Search appointment analises*/
+.analysis-table-wrapper {
+    .bb-0 {
+        border-bottom: 0;
+    }
+
+    table {
+        &.vuetable {
+            border: 0;
+        }
+    }
+
+    .sticky-header {
+        position: sticky;
+        top:0px;
+        background: $light-grey;
+        z-index:5;
+
+        .form-input {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.analysis-total {
+    line-height: 30px;
+    border: 1px solid $grey-sh3;
+    border-top: 0;
+    padding-right: 5px;
+}
+
+.analysis-modal-form {
+    .search-filter {
+        display: flex;
+
+        .filter-body {
+            display: inline-block;
+            width: 700px;
+        }
+
+        .filter-buttons {
+            margin-top: 19px;
+            margin-left: 25px;
+            float: right;
+        }
+    }
+
+    .manage-table {
+        .vuetable-body-wrapper.fixed-header {
+            max-height: 120px;
+        }
+    }
+}
+.d-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.transition {
+    -webkit-transition: .3s linear all;
+    -moz-transition: .3s linear all;
+    -o-transition: .3s linear all;
+    transition: .3s linear all;
+}
+.biomaterial-registration {
+    border-collapse: collapse;
+    thead {
+        text-align: center;
+    }
+    tbody {
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 1px solid #ccc;
+
+        &.active {
+            background-color: #E5E495;
+        }
+    }
+    tr {
+        background-color: transparent !important;
+
+    }
+    .row-border {
+        border-bottom: 1px solid #ccc;
+    }
+    
+}
+.table-list {
+    padding: 0;
+    width: 100%;
+
+    &__top {
+        padding: 0;
+        border: 1px solid #ccc;
+        background-color: #f6f6f6;
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        width: 100%;
+
+        &-title {
+            border-right: 1px solid #cccccc;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+
+            &:last-child {
+                border-right: 0;
+            }
+            &.column1 {
+                width: 10%;
+            }
+            &.column8 {
+                width: 10%;
+            }
+            &.column2 {
+                width: 25%;
+                padding: 0 12.5px;
+            }
+            &.column3 {
+                width: 10%;
+            }
+            &.column4 {
+                width: 10%;
+            }
+            &.column5 {
+                width: 7%;
+            }
+            &.column6 {
+                width: 23%;
+            }
+            &.column7 {
+                width: 8%;
+            }
+        }
+    }
+    &__content {
+        width: 100%;
+    }
+    &__item {
+        width: 100%;
+        border: 1px solid #bdbdbd;
+        border-top: 0;
+
+        &-column {
+            padding: 0;
+            border-right: 1px solid #bdbdbd;
+            justify-content: center;
+            align-items: center;
+
+            &:last-child {
+                border-right: 0;
+            }
+            &.column1 {
+                width: 90%;
+            }
+            &.column2 {
+                width: calc(10% - 1px);
+            }
+            .el-collapse-item {
+                width: 100%;
+            }
+        }
+        .accordion-top {
+            width: 100%;
+
+            &__column {
+                width: 20%;
+                border-right: 1px solid #bdbdbd;
+                justify-content: center;
+                align-items: center;
+
+                &:last-child {
+                    border-right: 0;
+                }
+
+                &.column10 {
+                    width: 10%;
+                }
+                &.column25 {
+                    width: 25%;
+                }
+            }
+        }
+        .accordion-content {
+            width: 100%;
+            cursor: pointer;
+            border-top: 1px solid #bdbdbd;
+
+            &:hover {
+                background-color: #F2F2F2;
+            }
+
+            &.active {
+                background-color: #E5E495;
+            }
+            &__row {
+                width: calc(100% - 81px);
+                border-right: 1px solid #bdbdbd;
+
+                &:hover {
+                    background-color: #F2F2F2;
+                }
+                &.active {
+                    background-color: #E5E495;
+                }
+            }
+            &__column {
+                border-right: 1px solid #bdbdbd;
+                justify-content: center;
+                align-items: center;
+                padding: 0 5px;
+
+                &:last-child {
+                    border-right: 0;
+                }
+                &.column1 {
+                    width: 10%;
+                }
+                &.column2 {
+                    position: relative;
+                    padding-right: 25px;
+                    width: 25%;
+
+                    @media  (max-width: 1355px) {
+                        width: 170px;
+                    }
+
+                    .has-icon {
+                        position: absolute;
+                        right: 5px;
+                    }
+                }
+                &.column3 {
+                    width: 10%;
+                    text-align: center;
+                }
+                &.column4 {
+                    width: 10%;
+                    text-align: center;
+                }
+                &.column5 {
+                    width: 10%;
+                    @media  (max-width: 1355px) {
+                        width: 60px;
+                    }
+                }
+                &.column8 {
+                    width: 10%;
+                }
+                &.column6 {
+                    width: 15%;
+                }
+                &.column7 {
+                    width: 5%;
+                    background-color: #fff !important;
+                    border-right: none;
+
+                    .has-icon {
+                        margin-left: 5px;
+                    }
+                }
+                .form-input {
+                    margin: 2px 0;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+.transfer-details {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdbdbd;
+}

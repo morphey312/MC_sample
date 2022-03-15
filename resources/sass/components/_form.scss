@@ -1,0 +1,37 @@
+.label-solid {
+	.label-wrapper {
+		display: inline-block;
+	}
+}
+.select-hidden {
+	width: 0px;
+	height: 0px;
+	
+	.el-select__tags {
+		display: none;
+	}
+
+	.el-input {
+		.el-input__suffix {
+			display: none;
+		}
+
+		.el-input__inner { 
+			width: 0 !important;
+			height: 0 !important;
+			border: 0 !important;
+			padding: 0 !important;
+		}
+	}
+}
+
+.el-select-icon {
+	img {
+		height: 20px;
+		vertical-align: middle;
+	}
+}
+
+.pac-container {
+	z-index: 99999 !important;
+}

@@ -1,0 +1,815 @@
+.time-block {
+    width: 67px;
+    background: $white;
+    border-top: 0;
+    border-left: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .time-item {
+        line-height: 16px;
+        text-align: center;
+        padding: 3px 0;
+        border-top: 1px solid $light-grey;
+        border-bottom: 1px solid $light-grey;
+    }
+
+    .time-item:first-child, .time-item:nth-child(12n + 13) {
+        background-color: $green;
+        color: #fff;
+        font-weight: 500;
+    }
+}
+
+.schedule-item-header {
+    width: 260px;
+    flex: 0 0 260px;
+    height: 124px;
+    float: left;
+    margin-right: 9px;
+    font: $font-family-roboto-regular-serif;
+    font-weight: 600;
+    color: $black;
+    background: $grey-sh4;
+    line-height: 14px;
+    border: 1px solid $light-grey;
+    border-bottom: 0;
+    overflow: hidden;
+
+    &.collapsed {
+        width: 131px;
+        flex: 0 0 131px;
+    }
+
+    .shedule-header-day {
+        position: relative;
+        font-weight: 500;
+        color: $blue;
+        border-bottom: 1px solid $grey-sh3;
+        line-height: 24px;
+
+        .schedule-switcher {
+            position: absolute;
+            cursor: pointer;
+
+            &.left {
+              left: 5px;
+            }
+
+            &.right {
+              right: 5px;
+            }
+        }
+
+        .header-datepicker {
+            cursor: pointer;
+            .el-date-editor {
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+                opacity: 0;
+                position: relative;
+                left: -50px;
+            }
+        }
+    }
+
+    .schedule-header-info, .shedule-header-day {
+        padding: 0px 26px 0px 23px;
+    }
+
+    .schedule-header-info {
+        position: relative;
+
+        p {
+            margin: 0;
+            line-height: 24px;
+            overflow: hidden;
+
+            &.ellipsis {
+                min-width: 0;
+                flex: 1 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .schedule-header-info:hover .icon-delete-wrapper {
+        display: block;
+    }
+
+    .icon-delete-wrapper {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        cursor: pointer;
+    }
+
+}
+
+.appointment-block {
+  width: calc(100% - 69px);
+  height: 100%;
+}
+
+.appointment-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-schedule-wrapper {
+    position: relative;
+    width: 308px;
+    height: 3453px;
+}
+
+.schedule-cell {
+    position: relative;
+    min-height: 23px;
+    display: block;
+    padding-left: 10px;
+    cursor: pointer;
+
+    .ellipsis {
+        min-width: 0;
+        flex: 1 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.has-appointment {
+       padding-left: 0;
+    }
+
+    .draggable-item {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        background-color: $white;
+        cursor: pointer;
+        border-left: 10px solid;
+        border-color: $grey;
+        white-space: normal;
+        overflow: hidden;
+        transition-property: height, overflow;
+        transition-duration: .2s;
+        transition-timing-function: linear;
+        transition-delay: 1s;
+
+        .draggable-cell-info {
+            color: $black;
+            white-space: normal;
+            position: relative;
+            padding: 0 14px;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .info-time {
+                color: $blue;
+                font-weight: 500;
+            }
+
+            #appointment-context-menu {
+                position: absolute;
+            }
+
+            .tag-list {
+                position: absolute;
+                right: 4px;
+                top: 4px;
+
+                .item-tag {
+                    line-height: 14px;
+                }
+            }
+
+
+        }
+        .contextmenu-arrow {
+            position: absolute;
+            right: 15px;
+            color: $blue;
+        }
+    }
+
+    .full-cell-info {
+        z-index: 99;
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(158,156,156,1);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(158,156,156,1);
+        box-shadow: 0px 0px 6px 0px rgba(158,156,156,1);
+
+        .dots {
+            position: absolute;
+            left: 0;
+            z-index: 999;
+            top: calc(50% - 7px);
+            width: 8px;
+            height: 14px;
+            background: url('/svg/icons/drag-active.svg') no-repeat center;
+        }
+    }
+
+    .copy-highlight{
+        z-index: 99;
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(183,179,8,1);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(183,179,8,1);
+        box-shadow: 0px 0px 6px 0px rgba(183,179,8,1);
+    }
+}
+.vac-day{
+    position: fixed;
+    z-index: 1111;
+    width: 260px;
+    pointer-events: none;
+    text-align: center;
+    color: #878787;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    span{
+        display: block;
+        font-size: 17px;
+    }
+}
+.vacation-day {
+    position: relative;
+    pointer-events: none;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        pointer-events: none;
+        background-color: $grey-sh5;
+    }
+}
+
+.appointment-cell {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.empty-cell {
+    background: $light-grey;
+    color: $dark-grey;
+    border-color: $dark-grey;
+}
+.main-empty-content-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    display: flex;
+
+    .empty-content {
+        width: 100%;
+        top: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .empty-content-img {
+        width: 501px;
+        height: 501px;
+        background-image: url('/svg/content/main-velcome.svg');
+    }
+}
+
+.empty-content-wrapper {
+    position: relative;
+    height: calc(100vh - 90px);
+    width: 100%;
+    background: $white;
+
+    .empty-content {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 109px);
+        text-align: center;
+
+        span {
+            display: block;
+            margin-top: 30px;
+            cursor: pointer;
+            font: $font-neo-sans-regular;
+            color: $blue;
+        }
+    }
+
+    .empty-content-img {
+        display: inline-block;
+        width: 283px;
+        height: 217px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/svg/content/img-null-notes.svg');
+    }
+
+    .vuetable.table {
+        margin-top: 0;
+    }
+}
+
+.select-daysheet-modal {
+    font: $font-family-roboto-regular-serif;
+
+    .filter-body {
+        display: inline-block;
+
+        .form-input {
+            width: 100%;
+        }
+    }
+
+    form {
+        &.search-filter {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            max-width: unset;
+
+            .el-date-editor {
+                .el-input__inner {
+                    padding-right: 4px;
+                }
+            }
+
+            .filter-buttons {
+                margin-top: 0;
+                margin-left: 25px;
+                float: right;
+
+                .el-button {
+                    margin-top: 17px;
+                }
+            }
+        }
+    }
+
+    .list-table-buttons {
+        width: 100%;
+        bottom: 0;
+        height: 51px;
+        line-height: 51px;
+        padding-right: 20px;
+        text-align: right;
+        border-top: 1px solid $light-grey;
+    }
+
+    .vuetable {
+        .el-select {
+            .el-input__inner {
+                padding-right: 5px;
+            }
+        }
+
+        .el-date-editor--time-select {
+            .el-input__prefix {
+                display: none;
+            }
+            .el-input__inner {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+    }
+}
+
+.modal-appointment-height-init {
+    position: relative;
+
+    #empty-data-wrapper {
+      position: relative;
+      height: 272px;
+
+        #empty-data {
+            position: absolute;
+            width: 205px;
+            height: 141px;
+            text-align: center;
+            bottom: calc(50% - 70px);
+            left: calc(50% - 102px);
+
+            #empty-data-img {
+                height: 110px;
+                background: url('/svg/content/img-no-data.svg') no-repeat center;
+            }
+
+            span {
+                display: block;
+                margin-top: 16px;
+                font-size: 12px;
+                color: $dark-grey;
+            }
+        }
+    }
+}
+
+.day-sheet-appointment-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.schedule-appointments {
+    float: left;
+    margin-right: 9px;
+    width: 260px;
+    flex: 0 0 260px;
+    border: 1px solid $light-grey;
+    overflow-x: hidden;
+
+    &.collapsed {
+        width: 131px;
+        flex: 0 0 131px;
+
+        .schedule-cell {
+            > div {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .schedule-item{
+      line-height: 23px;
+      border-bottom: solid 1px $grey-sh4;
+      border-left: 0;
+      border-right: 0;
+      background-color: $grey-sh5;
+      color: $dark-grey;
+    }
+}
+
+.schedule-header-wrapper {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    flex: none;
+    overflow-x: hidden;
+}
+
+.schedule-appointments-wrapper {
+    float: left;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 100%;
+    align-items: flex-start;
+
+    &::-webkit-scrollbar-track {
+        background: $grey-sh4;
+    }
+}
+
+//Schedule time block header
+.switch-schedule-period {
+    position: relative;
+    width: 67px;
+    height:124px;
+    background: $white;
+    text-align: center;
+    flex: none;
+
+    .schedule-switcher {
+        border-bottom: 1px solid $grey-sh3;
+        line-height: 24px;
+    }
+}
+
+.time-wrapper {
+    flex: none;
+    width: 67px;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid $grey-sh4;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.patient-switch-link {
+    margin-right: 10px;
+    font-weight: 500;
+    color: $blue;
+    cursor: pointer;
+}
+.cell-content {
+    color: $blue;
+}
+.lock-cell {
+    width: 16px;
+    height: 23px;
+
+    .svg-icon {
+        &.icon-blue:hover svg {
+            fill: $blue;
+        }
+
+        &.icon-green:hover svg {
+            fill: $green;
+        }
+    }
+}
+.in-active-discount-card {
+    color: #808080;
+}
+.locked {
+    background-color: $green-sh4;
+    color: $green;
+
+    .cell-content {
+        color: $green;
+    }
+
+    svg {
+        fill: $green;
+    }
+}
+
+.locked-foreign{
+    color: $grey;
+}
+
+.out-of-daysheet {
+    background: $grey-sh4;
+    color: $grey-sh3;
+    pointer-events: none;
+}
+
+.el-popover.schedule-popover {
+    width: auto !important;
+    height: auto;
+    padding: 0;
+    font: $font-family-roboto-regular-serif;
+    color: $blue;
+    line-height: 29px;
+    box-shadow: 0 4px 44px 0 $dark-grey;
+
+    .context-menu-wrapper {
+        position: relative;
+        padding: 12px 13px 6px 10px;
+
+        div {
+            cursor: pointer;
+        }
+    }
+}
+
+.popover-close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > div {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $blue;
+        position: static;
+        text-align: center;
+        font-size: 2px;
+
+        &:hover {
+            background: $red;
+        }
+
+        .el-icon-close {
+            color: $white;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 20px;
+        }
+    }
+}
+
+.schedule-cell-popover {
+    line-height: 29px;
+    box-shadow: 0 4px 44px 0 $dark-grey;
+    padding: 9px 13px 6px 10px;
+}
+
+.el-range__icon.el-icon-date {
+    display: none;
+}
+
+.slide-enter-active, .slide-leave-active {
+    transition: opacity .5s;
+}
+
+.slide-enter, .slide-leave-to {
+    opacity: 0;
+}
+
+.el-checkbox-group {
+    font-size: unset;
+}
+
+// Schedule operations dropdown
+.el-dropdown,
+.action-link,
+.el-dropdown-menu__item {
+    color: $blue;
+}
+
+.action-link,
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.el-dropdown-menu__item {
+    line-height: 26px;
+}
+
+.el-notification.right {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.el-notification.bottom-right {
+    right: 15px;
+    margin: unset;
+    left: unset;
+}
+//Appointment color tags
+.question-mark, .tag-list {
+    .item-tag {
+        line-height: 18px;
+    }
+
+    .item-tag-mark {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+
+        &.green {
+            background-color: $green;
+        }
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.grey {
+            background-color: $grey;
+        }
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.orange {
+            background-color: $orange;
+        }
+
+        &.red-alt {
+            background-color: $red-alt;
+        }
+
+        &.deep-blue-alt {
+            background-color: $deep-blue-alt;
+        }
+    }
+}
+
+.attention-border {
+    -moz-animation-name: attention;
+    -webkit-animation-name: attention;
+    animation-name: attention;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+@-moz-keyframes attention {
+    0% {
+        border-color: $red-sh6;
+    }
+    35% {
+        border-color: $red;
+    }
+}
+
+@-webkit-keyframes attention {
+    0% {
+        border-color: $red-sh6;
+    }
+    35% {
+        border-color: $red;
+    }
+}
+
+@keyframes attention {
+    0% {
+        border-color: $red-sh6;
+    }
+    35% {
+        border-color: $red;
+    }
+}
+
+.schedule-patient-block {
+   font: $font-neo-sans-small;
+   line-height: 17px;
+}
+
+.appointment-form-switcher {
+    .tab-switcher {
+        .el-tabs__header, .el-tabs__content {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .el-tabs__header {
+            line-height: 35px;
+        }
+
+        .el-tabs__content {
+            overflow: visible;
+        }
+    }
+}
+
+.add-assignments-btn {
+    position: absolute;
+    right: 0;
+    top: -28px;
+}
+
+.schedule_client_status_wrap {
+    display: flex;
+    width: 110%;
+}
+
+.schedule_client_status_list {
+    display: none;
+    margin-left: calc(100% - 10px);
+    position: absolute;
+    background-color: $white;
+    width: 100%
+}
+
+.schedule_client_status_title {
+    width: 100%
+}
+
+.schedule_client_status_title:hover + .schedule_client_status_list,
+.schedule_client_status_list:hover {
+    display: block;
+}
+
+.schedule_client_status_list div {
+    padding: 0 10px;
+}
+
+.schedule_client_status_list div:hover {
+    background-color: $blue;
+    color: $white;
+}
+
+.disable_changing_status {
+    pointer-events: none;
+    opacity: 0.4;
+}

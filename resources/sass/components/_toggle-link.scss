@@ -1,0 +1,54 @@
+.toggle-link, .expandable-item {
+  .caret {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    vertical-align: middle;
+    transition: transform .3s;
+    &:after {
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 4px 5px 4px;
+      content: ' ';
+      position: absolute;
+      top: 1px;
+      left: 0;
+    }
+  }
+}
+
+.toggle-link .caret {
+    transform: rotate(180deg);
+    &:after {
+        border-color: transparent transparent $blue transparent;
+    }
+    &.toggled {
+      transform: rotate(0);
+    }
+}
+
+.toggle-link.section .caret {
+    transform: rotate(90deg);
+    &.toggled {
+      transform: rotate(180deg);
+    }
+}
+
+.expandable-item .caret {
+    vertical-align: baseline;
+    margin-right: 3px;
+    transform: rotate(90deg);
+    &:after {
+        border-color: transparent transparent $black transparent;
+    }
+    &.toggled {
+      transform: rotate(180deg);
+    }
+}
+
+.expandable-item.child {
+    margin-left: 14px;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "responsive-sketchpad",
+  "version": "1.2.0",
+  "description": "A completely responsive sketchpad based on HTML5 canvas",
+  "main": "dist/sketchpad.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && webpack",
+    "format": "eslint src/** tests/** --fix",
+    "lint": "eslint src/** tests/**",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theisensanders-wf/responsive-sketchpad.git"
+  },
+  "keywords": [
+    "canvas",
+    "sketchpad",
+    "responsive",
+    "draw"
+  ],
+  "author": "Theisen Sanders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theisensanders-wf/responsive-sketchpad/issues"
+  },
+  "homepage": "https://tsand.github.io/responsive-sketchpad/",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.13",
+    "@types/jsdom": "^16.2.3",
+    "@types/jsdom-global": "^3.0.2",
+    "@types/webpack": "^4.41.21",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "canvas": "^2.6.1",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jasmine": "^3.6.1",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
+    "prettier": "^2.0.5",
+    "ts-loader": "^8.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

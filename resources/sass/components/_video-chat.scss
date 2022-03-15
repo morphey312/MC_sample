@@ -1,0 +1,165 @@
+.webcam-preview__wrap {
+    position: fixed;
+    z-index: 3000;
+    bottom: 50px;
+    right: 50px;
+
+    .drag-container {
+        background: $white;
+        box-shadow: $--box-shadow-base;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+
+        &.dragging {
+            transform: translateX(-9999px);
+        }
+    }
+
+    .header-block {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid $grey-sh4;
+
+        h2 {
+            flex-grow: 1;
+            padding: 5px 0;
+            margin: 0;
+        }
+
+        .svg-icon {
+            flex-shrink: 1;
+        }
+    }
+
+    .body-block {
+        width: 727px;
+        min-height: 480px;
+        background-color: $light-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .start-session {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 480px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .footer-block {
+        padding: 10px;
+        border-top: 1px solid $grey-sh4;
+        display: flex;
+        align-items: center;
+
+        .controls-main {
+            flex-grow: 1;
+        }
+
+        .controls-addon {
+            flex-shrink: 1;
+        }
+    }
+}
+
+.webcam-preview__wrap {
+    display: flex;
+    right: 50px;
+    left: initial;
+
+    .drag-container {
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+        .preview-container {
+            display: flex;
+
+            video {
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+.video-chat-drag-container {
+    cursor: grab;
+    position: fixed!important;
+    transition: opacity .2s ease-in-out;
+
+    &.dragging {
+        cursor: grabbing;
+        opacity: .9;
+    }
+
+    .video-chat {
+        .header-block {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid $grey-sh4;
+
+            h2 {
+                flex-grow: 1;
+                padding: 5px 0;
+                margin: 0;
+            }
+
+            .svg-icon {
+                flex-shrink: 1;
+                cursor: pointer;
+            }
+        }
+
+        .body-block {
+            width: 727px;
+            min-height: 480px;
+            background-color: $light-grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .start-session {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 480px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .footer-block {
+            padding: 10px;
+            border-top: 1px solid $grey-sh4;
+            display: flex;
+            align-items: center;
+
+            .controls-main {
+                flex-grow: 1;
+            }
+
+            .controls-addon {
+                flex-shrink: 1;
+            }
+        }
+
+        &.mode-mini {
+            .body-block {
+                width: 320px;
+                height: 240px;
+            }
+        }
+
+        .content-wrap {
+            background: $white;
+            box-shadow: $--box-shadow-base;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    }
+}

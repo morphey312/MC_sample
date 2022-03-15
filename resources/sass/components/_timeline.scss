@@ -1,0 +1,38 @@
+#timeline-visualization {
+    .vis-time-axis {
+        /* alternating column backgrounds */
+        .vis-grid.vis-odd {
+            background: #f5f5f5;
+        }
+    
+        /* gray background in weekends, white text color */
+        .vis-grid.vis-saturday, .vis-grid.vis-sunday {
+            background: gray;
+        }
+    
+        .vis-text {
+            &.vis-saturday, &.vis-sunday {
+                color: white;
+            }
+        }
+    }
+    
+    .vis-item {
+        background-color: $grey-sh6;
+        border-color: $blue-sh1;
+        color: $blue;
+        border-left-width: 3px;
+        border-left-style: solid;
+        font-weight: 500;
+        opacity: .8;
+        font-size: 13px;
+        height: 55px;
+    }
+    
+    .vis-group {
+        &.events-none {
+            background-color: $grey-sh4;
+            pointer-events: none;
+        }
+    }
+}

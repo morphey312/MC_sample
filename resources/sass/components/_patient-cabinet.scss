@@ -1,0 +1,191 @@
+.patient-cabined {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: no-wrap;
+    align-items: stretch;
+    width: 100%;
+
+    .additional-menu {
+        flex: none;
+    }
+
+    .page {
+        flex: 1 1;
+        overflow: hidden;
+
+        .patient-info {
+            margin-bottom: 50px;
+        }
+
+        section.details {
+            width: 100%;
+            margin: 10px 0 0 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .patient-info {
+                font: $font-neo-sans-tiny;
+                font-weight: 500;
+                border-left: 2px solid $green;
+                padding-left: 10px;
+
+            }
+        }
+
+    }
+
+    .sticky-footer {
+        padding: 10px 20px;
+        border-top: 1px solid $grey-sh4;
+        background: $white;
+
+        left: $side-menu-width + 280;
+    }
+
+    .records-history {
+        .block-card-records {
+            overflow: auto;
+            margin-bottom: 50px;
+        }
+
+        .pagination-wrapper {
+            padding: 0;
+            border: 0;
+        }
+    }
+}
+
+.collapsed-aside + main {
+    .patient-cabined {
+        .sticky-footer {
+            left: $side-menu-collapsed-width + 280;
+        }
+    }
+}
+
+.outpatient-record-details {
+    .el-checkbox.is-checked {
+        .el-checkbox__input.is-disabled + span.el-checkbox__label {
+            color: $black;
+        }
+        .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
+            background: $green;
+            border-color: $green;
+        }
+        .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+            border-color: $white;
+        }
+    }
+    .card-record-section {
+        padding-bottom: 0;
+
+        h2 {
+            display: inline-block;
+        }
+
+        .card-record-field {
+            .field-input {
+                margin: 10px 5px 10px 0;
+
+                &.border-bottom {
+                    border-bottom: 2px solid $grey-sh4;
+                }
+            }
+        }
+    }
+    section > h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.treatment-course-details {
+    .course-header {
+        font-weight: 500;
+        color: $black;
+        
+        p:last-child {
+            margin: 0;
+        }
+        
+        .cost-wrapper {
+            border-left: 1px solid $grey-sh3;
+            padding-left: 20px;
+        }
+    }
+    
+    .manage-table .totals {
+        padding: 8px 5px 0 5px;
+        height: 30px;
+        box-sizing: border-box;
+        font-weight: 500;
+        color: $black;
+        text-align: right;
+        border-top: 1px solid $grey-sh4;
+    }
+
+    .el-tab-pane {
+        h3 {
+            margin: 0;
+            padding-left: 7px;
+            line-height: 25px;
+            color: $white;  
+
+            &.bg-red {
+                background-color: $red;
+            }
+
+            &.bg-blue {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+.el-dialog__header-addon {
+    display: flex;
+
+    .header-date__wrap {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .header-date {
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 10px;
+            margin-left: 10px;
+            line-height: 20px;
+        }
+
+        .time {
+            color: #1B6EBE;
+        }
+    }
+
+    .header-calendar__wrap {
+        position: absolute;
+        z-index: 2;
+        width: 230px;
+        right: -40px;
+        top: 40px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    .no-changes {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        margin-right: 15px;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

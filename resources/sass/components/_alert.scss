@@ -1,0 +1,51 @@
+.alert {
+    padding: 2px 20px;
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+
+    .alert-text {
+        flex-grow: 1;
+        font: $font-family-roboto-regular-serif;
+        color: $white;
+        padding: 5px 0;
+    }
+
+    .svg-icon {
+        margin-right: 10px;
+    }
+
+    .svg-icon, .svg-icon:hover {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &.alert-info {
+        background-color: $blue-sh3;
+    }
+
+    &.alert-do_not_take_payment {
+        background-color: $blue-sh3;
+    }
+
+    &.alert-black-mark {
+        background-color: $black;
+    }
+
+    &.alert-skk {
+        background-color: $red;
+    }
+
+    &.alert-attention {
+        background-color: $red;
+    }
+
+    &.alert-conference {
+        background-color: $green;
+    }
+}

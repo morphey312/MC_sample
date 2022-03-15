@@ -1,0 +1,192 @@
+.el-dialog {
+    max-width: 90%;
+    
+    .el-dialog__header {
+        text-align: left;
+        padding: 15px 20px;
+        border-bottom: 1px solid $grey-sh3;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+       > h2 {
+            display: inline-block;
+            margin: 0 15px 0 0;
+            font: $font-neo-sans-regular;
+            flex: 1;
+        }
+
+        .buttons {
+            margin-right: 15px;
+        }
+
+        .el-dialog__headerbtn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: $blue;
+            position: static;
+
+            &:hover {
+                background: $red;
+            }
+
+            .el-icon-close {
+                color: $white;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .el-dialog__body {
+        padding: 20px 20px 0 20px;
+        font: inherit;
+
+        .sections-wrapper {
+            margin: -20px;
+        }
+
+        section {
+            padding: 20px;
+            background: $white;
+
+            &.grey {
+                background: $light-grey;
+            }
+
+            &.grey-cap {
+                background-image: linear-gradient(to bottom, $light-grey 0, $light-grey 75px, $white 75px);
+            }
+            
+            &.darkgrey-cap {
+                background-image: linear-gradient(to bottom, $grey-sh7 0, $grey-sh7 67px, $white 67px);
+            }
+
+            &.split-left {
+                border-left: 1px solid $grey-sh4;
+            }
+        }
+        
+        .el-tabs__header {
+            padding: 0 20px;
+        }
+        
+        section.back {
+            margin: -20px -20px 20px -20px;
+            background: $beige;
+            color: $blue;
+            padding: 5px 20px;
+        }
+
+        .form-input {
+            &.mt-0 {
+                margin-top: 0;
+            }
+            &.mr-0 {
+                margin-right: 0;
+            }
+            &.mb-0 {
+                margin-bottom: 0;
+            }
+            &.ml-0 {
+                margin-left: 0;
+            }
+        }
+
+        .confirmation-message {
+            line-height: 150%;
+        }
+    }
+
+    .dialog-footer{
+        padding: 15px 20px;
+        border-top: 1px solid $grey-sh4;
+        
+        .pagination-wrapper {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    .form-header {
+        border-bottom: 1px solid $grey-sh4;
+        margin: -20px -20px 20px -20px;
+    }
+
+    .form-footer {
+        padding: 15px 20px;
+        border-top: 1px solid $grey-sh4;
+        margin: 20px -20px -20px -20px;
+    }
+
+    &.pt-0 {
+        .el-dialog__body {
+            padding-top: 0;
+        }
+    }
+    
+    &.no-footer .el-dialog__body {
+        padding-bottom: 20px;
+    }
+    
+    &.scrollable .el-dialog__body {
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+}
+
+.grey {
+    background: $light-grey;
+}
+
+.top-form-part{
+    padding: 20px 15px;
+    
+    
+}
+
+.top-form-part .el-radio-button__inner{
+    font-weight: normal;
+    padding: 7px 20px;
+    border-color: #BDBDBD;
+}
+
+.el-radio-button:last-child .el-radio-button__inner{
+    border-radius: 0 2px 0 2px;
+} 
+.el-radio-button:first-child .el-radio-button__inner{
+    border-radius: 2px 0 2px 0;
+}
+.top-form-part .duration-select label,
+.top-form-part .duration-select .el-input__inner{
+    width: 158px;
+}
+.top-form-part .duration-select.margin-4{
+    margin-left: -4px;
+}
+
+.three-rows-height {
+    .el-textarea {
+        textarea {
+            height: 168px;
+        }
+    }
+}
+
+.details__modal{
+    .el-dialog__header-addon{
+        align-items: center;
+        .no-changes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-date__wrap{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

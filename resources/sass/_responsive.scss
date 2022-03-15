@@ -1,0 +1,187 @@
+@media screen and (max-width: 1366px) {
+    //Controls
+    .label-wrapper {
+        margin-bottom: 1px;
+    }
+
+    .el-input__inner, .el-input--medium .el-input__inner {
+        height: 25px;
+        line-height: 25px;
+    }
+
+    // Form layout
+    .form-input, .form-input-group {
+        margin-bottom: 10px;
+    }
+
+    form.search-filter:not(.collapsed) .filter-buttons {
+        margin-top: 14px;
+    }
+
+    // Textarea
+    .el-textarea .el-textarea__inner {
+        &[rows="2"] {
+            height: 75px;
+        }
+
+        &[rows="3"] {
+            height: 125px;
+        }
+    }
+
+    .el-select {
+        &.collapse-tags {
+            > .el-input.el-input--medium > input {
+                height: 25px !important;
+            }
+        }
+    }
+
+    // Radio group
+    .el-radio-group {
+        height: 25px;
+        .el-radio-button {
+            .el-radio-button__inner {
+                padding: 6px 12px;
+            }
+        }
+    }
+
+    // Buttons
+    .el-button {
+        height: 25px;
+        line-height: 9px;
+
+        &.el-button--default {
+            padding: 0 12px;
+        }
+    }
+
+//Layouts
+    .page {
+        .page-header {
+            padding: 6px 20px;
+        }
+
+        section {
+            padding: 10px 20px;
+        }
+    }
+
+//Modal
+    .el-dialog {
+        .el-dialog__header {
+            padding: 10px 20px;
+        }
+    }
+
+    .three-rows-height {
+        .el-textarea {
+            textarea {
+                height: 125px;
+            }
+        }
+    }
+
+//Pagination
+    .pagination-wrapper {
+        .pagination.menu {
+            .item {
+                height: 25px;
+                line-height: 25px;
+
+                &.btn-nav.icon {
+                    .double.icon {
+                        &.left {
+                            &:before {
+                                left: 33%;
+                            }
+                        }
+                        &.right {
+                            &:before {
+                                left: 67%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+//Transfer table
+    .transfer-table {
+        .available-items:not(.has-filter), .selected-items:not(.has-filter) {
+            .vuetable.table thead th {
+                height: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page {
+        .page-header {
+            .heading-wrapper {
+                .heading  {
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .label-wrapper {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .input-label {
+            white-space: nowrap;
+        }
+    }
+
+    // Radio group
+    .el-radio-group {
+        height: 25px;
+        .el-radio-button {
+            .el-radio-button__inner {
+                padding: 6px;
+            }
+        }
+    }
+
+    .select-daysheet-modal {
+        form.search-filter:not(.collapsed) .filter-buttons {
+            margin-top: 0px;
+        }
+    }
+
+    .button-title {
+        display: none;
+    }
+
+    .additional-menu-wrapper__appointment {
+        flex: 0 0 40px;
+        transition: flex ease-in-out .5s;
+        .additional-menu {
+            width: 40px;
+            transition: width ease-in-out .5s;
+        }
+        .mob-menu-toggle {
+            left: 42px;
+            position: absolute;
+            transition: left ease-in-out .5s;
+            display: block;
+        }
+    }
+    .additional-menu-wrapper__appointment:is(.touched) {
+        flex: 0 0 280px;
+        .additional-menu {
+            width: 280px;
+        }
+        .mob-menu-toggle {
+            left: 282px;
+        }
+    }
+}

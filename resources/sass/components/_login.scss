@@ -1,0 +1,48 @@
+.bg-login {
+    background: url('/svg/start-screen.svg') rgba(27, 110, 190, 0.76) no-repeat center;
+
+    .content {
+        .el-main {
+            padding: 20px !important;
+        }
+    }
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    color: $white;
+    
+    h1 {
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    .login-form-input {
+        text-align: left;
+    }
+
+    .el-input .el-input__inner {
+        background: none;
+        border: none;
+        border-bottom: 2px solid $white;
+        border-radius: 0;
+        color: $white;
+        height: auto;
+        line-height: 30px;
+        padding-left: 0;
+        
+        &:focus {
+            color: $white;
+        }
+    }
+
+    label {
+        text-align: left;
+        color: $white;
+    }
+}

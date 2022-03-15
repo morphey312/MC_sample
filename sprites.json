@@ -1,0 +1,12 @@
+{
+    "dest": "public/svg",
+    "mode": {
+        "defs": {
+            "dest": "spritesheet",
+            "sprite": "sprite.svg",
+            "example": {
+                "dest": "icons.html"
+            }
+        }
+    }
+}

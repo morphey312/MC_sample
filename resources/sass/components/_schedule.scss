@@ -1,0 +1,27 @@
+.schedule-picker {
+    .list {
+        padding-inline-start: 20px;
+        margin: 5px 0;
+        li {
+            padding: 5px 0;
+            clear: both;
+            a {
+                float: right;
+                color: $red;
+            }
+        }
+    }
+    .entry {
+        margin-bottom: 10px;
+    }
+    .empty {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+    .el-radio-group {
+        margin-bottom: 10px;
+    }
+}

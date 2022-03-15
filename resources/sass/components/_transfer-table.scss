@@ -1,0 +1,110 @@
+.transfer-table {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .vuetable.table {
+        width: auto;
+        min-width: 100%;
+        min-height: 100%;
+
+        th {
+            vertical-align: middle;
+        }
+
+        tbody tr td {
+            vertical-align: text-top;
+
+            &.vuetable-empty-result {
+                text-align: center;
+                vertical-align: middle;
+                color: $grey-sh3;
+
+                img {
+                    display: block;
+                    margin: 0 auto 10px;
+                }
+            }
+
+        }
+        tbody tr:not(:last-child) td {
+            height: 1em;
+        }
+    }
+
+    .available-items, .selected-items {
+        border: 1px solid $grey-sh4;
+        display: flex;
+        flex-direction: column;
+
+        > div:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+
+            .vuetable-body-wrapper {
+                flex: 1;
+
+                .el-input-number__increase, .el-input-number__decrease {
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+
+    .available-items.has-filter, .selected-items.has-filter {
+        .vuetable.table thead .css-checkbox {
+            position: relative;
+            top: 14px;
+        }
+    }
+
+    .available-items:not(.has-filter), .selected-items:not(.has-filter) {
+        .vuetable.table thead th {
+            height: 43px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+            margin: 10px;
+            display: inline-block;
+            cursor: default;
+
+            &.active {
+                cursor: pointer;
+            }
+
+            svg {
+                fill: $grey-sh4
+            }
+
+            &.active svg {
+                fill: mix($green, $white, 70);
+            }
+
+            &.active:hover svg {
+                fill: $green;
+            }
+        }
+    }
+}
+
+.transfer-footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid $grey-sh3;
+}
+.selectable-data {
+    td {
+        user-select: text;
+    }
+}

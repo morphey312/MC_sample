@@ -1,0 +1,32 @@
+.empty-content-wrapper.with-circle {
+    .empty-content {
+        top: 30%;
+
+        &.top-10 {
+            top: 10%;
+        }
+
+        > div {
+            display: inline-block;
+            width: 279px;
+            height: 279px;
+            border-radius: 50%;
+            background: $grey-sh5;
+        }
+
+        span {
+            margin-top: 16px;
+            font: $font-family-roboto-regular-serif;
+            font-weight: 500;
+            color: $blue;
+        }
+    }
+
+    .empty-content-img {
+        width: 140px;
+        height: 95px;
+        margin-top: 83px;
+        margin-left: 45px;
+        background-image: url('/svg/content/null-cashbox.svg');
+    }
+}
